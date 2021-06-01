@@ -140,7 +140,7 @@ describe('SearchInputComponent', () => {
       component.onSearchChange(searchedTerm);
     });
 
-    it('should show snack for empty search', (done) => {
+    it('should show error snackbar for empty search', (done) => {
       const searchedTerm = '';
       actions$
         .pipe(
