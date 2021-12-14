@@ -285,6 +285,18 @@ describe('evaluators', () => {
       expect(canOpenWithOffice(context)).toBeFalsy();
     });
 
+    it('should return [false] when `aosPlugin` property is false', () => {
+      const context: any = {};
+      context['aosPlugin'] = false;
+      expect(canOpenWithOffice(context)).toBeFalsy();
+    });
+
+    it('should return [true] when `aosPlugin` property is true', () => {
+      const context: any = {};
+      context['aosPlugin'] = true;
+      expect(canOpenWithOffice(context)).toBeTruthy();
+    });
+
     it('should return [true] if all checks succeed', () => {
       const context: any = {
         selection: {
